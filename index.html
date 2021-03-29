@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="all">
+        <div class="filter-section">
+            <h2>Filter</h2>
+            <form class="form-filter">
+                <div class="container-element">
+                    <label for="filterTitle">Filter Title</label>
+                    <input type="text" name="filterTitle" id="filterTitle">
+                </div>
+                <div class="container-element">
+                    <label for="filterDescription">Filter Description</label>
+                    <input type="text" name="filterDescription" id="filterDescription">
+                </div>
+            </form>
+        </div>
+        <div class="form-section">
+            <h2 class="mt-2">To Do List</h2>
+                <form class="form"> 
+                    <div class="container-element">
+                        <label for="taskTitle">Task Title</label>
+                        <input type="text" name="taskTitle" id="taskTitle">
+                    </div>
+                    <div class="container-element">
+                        <label for="taskDescription">Task Description</label>
+                        <textarea name="taskDescription" id="taskDescription"></textarea>
+                    </div>
+                    <div class="container-controls">
+                        <input type="submit" class="createTask" value="Add Task"></input>
+                        <input type="button" class="switchModal" value="Modal OFF">
+                        <input type="button" class="deleteTasks" value="Delete Tasks">
+                    </div>
+                </form>
+            </div>
+        </div>
+    <div class="container-items"></div>
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-background-color: #ebebeb;
+  --completed: #05e322;
+  --delete: #e30000;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+}
+
+.all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Filter Section */
+.all .filter-section {
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.all .form-section {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.all .filter-section .form-filter {
+  width: 90%;
+  height: 20vh;
+  background-color: var(--main-background-color);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Form */
+.form {
+  width: 40vw;
+  height: 30vh;
+  background-color: var(--main-background-color);
+  margin-top: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form .container-element,
+.all .filter-section .form-filter .container-element {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form .container-element input[type="text"],
+.form .container-element textarea {
+  width: 100%;
+}
+
+.form .container-element textarea {
+  height: 8vh;
+}
+
+.form .container-controls {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form input[type="submit"],
+.form input[type="button"] {
+  padding: 5px 10px;
+}
+
+/* Container Tasks */
+.container-items {
+  width: 100vw;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-wrap: wrap;
+}
+
+/* Task */
+.task {
+  width: 30%;
+  height: 210px;
+  margin-bottom: 1rem;
+}
+
+.task .expand-content {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--main-background-color);
+  padding: 0 2rem;
+
+  outline: none;
+  border: none;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task .active,
+.task .expand-content:hover {
+  background-color: #b5b5b5;
+}
+
+/* Expand task */
+.task .content-task {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: var(--main-background-color);
+
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.task .content-task p {
+  padding: 0.5rem 0 0 2rem;
+}
+
+.task .content-task .controls-task {
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.task .content-task .complete-task,
+.task .content-task .delete-task {
+  padding: 10px 15px;
+  outline: none;
+}
+
+.task .content-task .complete-task {
+  margin-right: 15px;
+  color: var(--completed);
+  border: 1px solid var(--completed);
+}
+
+.task .content-task .delete-task {
+  margin-left: 15px;
+  color: var(--delete);
+  border: 1px solid var(--delete);
+}
+
+.complete {
+  font-weight: 600;
+  color: var(--completed);
+  border: 2px solid var(--completed) !important;
+}
+
+/* Modal task */
+.myModal {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.closeModal {
+  align-self: flex-end;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.myModal .closeModal {
+  padding: 5px;
+  border: none;
+}
+
+.myModal p {
+  padding: 0.5rem;
+}
+
+.myModal .complete-task,
+.myModal .delete-task {
+  padding: 5px 10px;
+  outline: none;
+}
+
+.myModal .controls-task {
+  margin-bottom: 10px;
+}
+
+.myModal .complete-task {
+  margin-right: 15px;
+  color: var(--completed);
+  border: 1px solid var(--completed);
+}
+
+.myModal .delete-task {
+  margin-left: 15px;
+  color: var(--delete);
+  border: 1px solid var(--delete);
+}
